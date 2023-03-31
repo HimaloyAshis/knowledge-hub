@@ -2,8 +2,9 @@ import React from 'react';
 import './Blog.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
+import { faUnderline } from '@fortawesome/free-solid-svg-icons'
 
-const Blog = ({ blog,bookMark }) => {
+const Blog = ({ blog, bookMark, markedAsRead }) => {
     // console.log(blog)
     const { Id, Author_Image, Author_Name, Blog_title, Cover_image, Publish_Time, Read_Time } = blog
     return (
@@ -24,11 +25,14 @@ const Blog = ({ blog,bookMark }) => {
                 </div>
                 <div className="d-flex align-items-center gap-3">
                     <p>{Read_Time}min </p>
-                    <FontAwesomeIcon icon={faBookmark} onClick={()=>bookMark(blog)} />
+                    <FontAwesomeIcon icon={faBookmark} onClick={() => bookMark(blog)} />
                 </div>
             </div>
             <h3>{Blog_title}</h3>
-            <p>Mark as read</p>
+            <div>
+                <p onClick={() => markedAsRead(blog.Read_Time)}>Mark as read</p>
+                
+            </div>
 
         </div>
     );

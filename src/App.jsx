@@ -11,13 +11,27 @@ import { useState } from 'react';
 
 function App() {
   const [Blog, setBlog] = useState([])
+  const [time, setTime] = useState()
   
 
+  const markedAsRead=(time)=>{
+    const previousTime = JSON.parse(localStorage.getItem('time'))
+    if(previousTime){
+      const sum = previousTime + time
+      localStorage.setItem('time', sum)
+      setTime(sum)
+    }
+    else{
+      localStorage.setTime('time', time)
+      setTime(time)
+    }
+    console.log('ok')
+  }
+
   const bookMark=(blog)=>{
-    console.log(blog.Blog_title)
+    // console.log(blog.Blog_title)
    const newBlog = [...Blog, blog]
    setBlog(newBlog)
-   setTitle(blog)
   }
 
   return (
@@ -25,7 +39,7 @@ function App() {
       <Header></Header>
       <div className='row'>
         <div className="blog col col-md-8">
-          <Blogs bookMark={bookMark}></Blogs>
+          <Blogs bookMark={bookMark} markedAsRead={markedAsRead}></Blogs>
         </div>
         <div className=" col col-md-4">
           <Card Blog={Blog}></Card>
