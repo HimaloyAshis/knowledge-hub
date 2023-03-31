@@ -1,10 +1,10 @@
 import React from 'react';
 import './Card.css'
 
-const Card = ({data}) => {
+const Card = () => {
     return (
         <div className='image'>
-            <img src={data.Cover_image} alt="" />
+            <h2>ok to</h2>
         </div>
     );
 };
