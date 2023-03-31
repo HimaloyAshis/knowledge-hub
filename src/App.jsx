@@ -6,12 +6,18 @@ import Card from './components/Card/Card'
 import Header from './components/Header/Header'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { useState } from 'react';
 
 
 function App() {
+  const [Blog, setBlog] = useState([])
+  
 
-  const bookMark=(title)=>{
-    
+  const bookMark=(blog)=>{
+    console.log(blog.Blog_title)
+   const newBlog = [...Blog, blog]
+   setBlog(newBlog)
+   setTitle(blog)
   }
 
   return (
@@ -22,7 +28,7 @@ function App() {
           <Blogs bookMark={bookMark}></Blogs>
         </div>
         <div className=" col col-md-4">
-          <Card></Card>
+          <Card Blog={Blog}></Card>
         </div>
       </div>
     </div>

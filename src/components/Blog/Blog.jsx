@@ -24,7 +24,7 @@ const Blog = ({ blog,bookMark }) => {
                 </div>
                 <div className="d-flex align-items-center gap-3">
                     <p>{Read_Time}min </p>
-                    <FontAwesomeIcon icon={faBookmark} onClick={()=>bookMark(Blog_title)} />
+                    <FontAwesomeIcon icon={faBookmark} onClick={()=>bookMark(blog)} />
                 </div>
             </div>
             <h3>{Blog_title}</h3>
