@@ -4,11 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Blogs from './components/Blogs/Blogs'
 import Card from './components/Card/Card'
 import Header from './components/Header/Header'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
 import Time from './components/Time/Time';
 import Narration from './components/Narration/Narration';
+
 
 
 
@@ -33,6 +36,7 @@ function App() {
   const bookMark = (blog) => {
     // console.log(blog.Blog_title)
     const newBlog = [...Blog, blog]
+    toast('Title added')
     setBlog(newBlog)
   }
 
@@ -49,6 +53,7 @@ function App() {
           <Card Blog={Blog}></Card>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   )
 }

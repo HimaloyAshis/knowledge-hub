@@ -23,7 +23,7 @@ const Narration = () => {
                 </div>
                 <div className='mt-4'>
                     <p className='fs-4 fw-bold'>How does react work?</p>
-                    <p className='fs-5 '><span className='fs-4 fw-bold'>useState : </span> In one word useState is a changeable state.It has two parameter When useState call a function it changes and set the result other parameter then it render the result.</p>
+                    <p className='fs-5 '>React is a JavaScript component based library. It fast and flexible for web and mobile UI. It make a copy of real DOM called virtual DOM and when need to change it compare to real copy and virtual DOM and update only changed point etc. </p>
                 </div>
             </div>
         </div>
