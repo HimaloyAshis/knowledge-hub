@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
 import Time from './components/Time/Time';
+import Narration from './components/Narration/Narration';
 
 
 
@@ -40,8 +41,8 @@ function App() {
       <Header></Header>
       <div className='row'>
         <div className="blog col col-md-8">
-
           <Blogs bookMark={bookMark} markedAsRead={markedAsRead}></Blogs>
+          <Narration></Narration>
         </div>
         <div className=" col col-md-4">
           <Time time={time}></Time>

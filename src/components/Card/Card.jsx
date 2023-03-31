@@ -15,7 +15,7 @@ const Card = ({Blog}) => {
                 Blog.map(blog=>{
                     
                     if(blog.Blog_title===blog.Blog_title){
-                        return <h4 className='mt-4 border p-4'>{blog.Blog_title} !!</h4>
+                        return <h4 className='mt-4 shadow-sm p-3 mb-5 bg-body-tertiary rounded'>{blog.Blog_title} !!</h4>
                     }
                     else{
                         return  console.log('not cool')
