@@ -11,7 +11,7 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 function App() {
 
   const bookMark=(title)=>{
-    console.log(title)
+    
   }
 
   return (
