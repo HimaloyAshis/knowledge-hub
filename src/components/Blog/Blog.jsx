@@ -29,8 +29,8 @@ const Blog = ({ blog, bookMark, markedAsRead }) => {
                 </div>
             </div>
             <h3>{Blog_title}</h3>
-            <div>
-                <p onClick={() => markedAsRead(blog.Read_Time)}>Mark as read</p>
+            <div className='markasread'>
+                <p onClick={() => markedAsRead(blog.Read_Time)} className="cursor: pointer">Mark as read</p>
                 
             </div>
 
